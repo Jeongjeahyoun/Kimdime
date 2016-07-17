@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>김디매 기상청</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+   
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">김디매 기상청</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="repost.html">게시판</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url(<%= image_url'dok.png'%>);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>김디매 기상청</h1>
+                        <hr class="small">
+                        <span class="subheading">출격을 허가한다!</span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <center>
+    <div class="well" margin-left:"20px"><h2><strong><%= @comment %> </strong> </h2></div>
+
+    <ul> 
+        <h3 style="color:orange">서울/경기</h3>
+        
+            
+            <div style="float: left; width: 25%;"><%= raw @morning.image_url %></div>
+            <div style="float: left; width: 25%;"><h2><%= @morning.temperture %>도 <%= @morning.day %></h2></div>
+           
+    
+            <div style="float: left; width: 25%;"><%= raw @afternoon.image_url %></div>
+            <div style="float: left; width: 25%;"><h2><%= @afternoon.temperture %>도 <%= @afternoon.day %></h2></div>
+            
+        
+    </ul>
+    
+    </center> 
+
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <main class="mdl-layout__content">
+                    <div class="mdl-grid portfolio-max-width">
+                            
+                            
+                            <h1>공지사항</h1>
+                            <h3>김디매 기상청은 현재 서울/경기 날씨만 지원하고 있습니다.</h3>
+                            <h3>디매 날씨 명령권자 서울대님의 자료를 활용했습니다 </h3>
+                            <div class="well">
+                            <h1>출격레벨을 숙지하세요</h1>
+                             <p>출격- 출격가능, 퇴각-격추당함</p>
+                            <h2>과학적 디매 온도별 출격 경계령</h2>
+                            <h3>1단계 0도 이하 : 사람이 나갈 수 없는 날씨(대장급 패딩 출격 허가)</h3>
+                            <h3>2단계 0~10도 : 초겨울에서 겨울날씨(패딩, 겨울코트 출격 허가)</h3>
+                            <h3>3단계 10~15도 : 완연한 가을 날씨(맥코트, 트렌치코트, 가죽자켓, 울자켓 출격허가)</h3>
+                            <h3>4단계 15~20도 : 애매한 가을 날씨(긴팔티, 맨투맨, 니트, 얇은 자켓류 출격 허가)</h3>
+                            <h3>5간계 20~25도 : 살짝 더운 초여름 날씨(긴팔티 / 반팔티 혼용기간)</h3>
+                            <h3>6단계 25~30도 : 여름 날씨(반팔, 반바지 출격)</h3>
+                            <h3>7단계 30도 이상 : 사람이 나갈 수 없는 날씨(맨몸 출격 허가)</h3>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    
+           <div class="container">
+                  <table class="table table-bordered" >
+                <thead>
+                  <tr style="font size:35;">
+                    <th><center><h3>카테고리</center></h3></th>
+                    <th><center><h3>명칭</center></h3></th>
+                    <th><center><h3>오전 출격/퇴각 명령</center></h3></th>
+                    <th><center><h3>오후 출격/퇴각 명령</center></h3></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    
+                    <!--<h2>오전</h2>-->
+                    <% Cloth.all.each do |c| %>
+                      <tr>
+                        <td><center><h3> <%= c.category %> </center></h3></td>
+                        <td><center><h3> <%= c.name %> </h3></center></td>
+                        <% if @morning.temperture > c.min and @morning.temperture < c.max %>
+                         <td style="color: green;"><center><h3> 출격 </h3></center></td> 
+                        <% else %>
+                         <td style="color: red;"><center><h3> 퇴각 </h3></center></td>
+                        <% end %>
+                        <% if @afternoon.temperture > c.min and @afternoon.temperture < c.max %>
+                         <td style="color: green;"><center><h3> 출격 </h3></center></td> 
+                        <% else %>
+                         <td style="color: red;"><center><h3> 퇴각 </h3></center></td>
+                        <% end %>
+                      </tr>
+                    <% end %>
+                    
+                    <!--<h2>오후</h2>-->
+                    
+                    
+                </tbody>
+              </table>
+          </div>
+        </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p align="center">멋쟁이사자처럼</p>
+                    <p align="center">만든이 : 나민지, 김명선, 정제현, 김순후</p>
+                    <p class="copyright text-muted">Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+
+
+    
+    
+    </body>
+
+</html>
